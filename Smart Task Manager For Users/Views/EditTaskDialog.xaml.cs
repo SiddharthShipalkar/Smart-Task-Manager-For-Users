@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Smart_Task_Manager_For_Users
+namespace Smart_Task_Manager_For_Users.Views
 {
     /// <summary>
     /// Interaction logic for EditTaskDialog.xaml

@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:diag="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:local="clr-namespace:Smart_Task_Manager_For_Users" 
+        xmlns:local1="clr-namespace:Smart_Task_Manager_For_Users.Views"
+        xmlns:local2="clr-namespace:Smart_Task_Manager_For_Users.Models"
         mc:Ignorable="d"
         Title="Smart Task Manager" Height="450" Width="800"  WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="Images/Icon.png">
     <Window.Resources>
         <DropShadowEffect x:Key="ShadowEffect" Color="Black" BlurRadius="10" ShadowDepth="5" />
-        <local:BooleanToBlurEffectConverter x:Key="BooleanToBlurEffectConverter" />
+        <local2:BooleanToBlurEffectConverter x:Key="BooleanToBlurEffectConverter" />
         <!-- Modern Button Style -->
         <Style x:Key="ModernButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#007ACC" />
@@ -173,11 +175,8 @@
             </Grid>
         </Border>
         <Popup IsOpen="{Binding IsEditDialogOpen}" Placement="Center">
-                <local:EditTaskDialog  DataContext="{Binding}" />
+            <local1:EditTaskDialog  DataContext="{Binding}" />
         </Popup>
 
-        <Popup IsOpen="{Binding IsEditDialogOpen}" Placement="Center">
-            <local:UpcomingTasksControl  DataContext="{Binding}" />
-        </Popup>
     </Grid>
 </Window>

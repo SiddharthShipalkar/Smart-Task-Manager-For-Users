@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Media.Effects;
 
-namespace Smart_Task_Manager_For_Users
+namespace Smart_Task_Manager_For_Users.Models
 {
     public class BooleanToBlurEffectConverter : IValueConverter
     {
